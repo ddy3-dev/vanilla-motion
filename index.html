@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="
+                upgrade-insecure-requests;
+                base-uri 'self';
+                form-action 'self';
+                object-src 'none';
+                connect-src 'self';
+                media-src 'self';
+                img-src 'self';
+                style-src 'self';
+                font-src 'self';
+                frame-src 'self';">
+
+        <title>Vanilla Motion</title>
+        <meta 
+            name="description"
+            content="A sample SPA project from scratch with no framework.">
+        
+        <meta property="og:title" content="Vanilla Motion">
+        <meta property="og:description" content="A sample SPA project from scratch with no framework.">
+
+        <link 
+            rel="stylesheet" 
+            type="text/css"
+            href="style.css">
+
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <nav>
+            <a href="/" class="link">Home</a>
+            <a href="/page-a" class="link">Page A</a>
+            <a href="/page-b" class="link">Page B</a>
+        </nav>
+        <div id="app"></div>
+    </body>
+</html>

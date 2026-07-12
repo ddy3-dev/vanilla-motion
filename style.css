@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aqua;
+    margin: 0;
+}
+
+/* Tablet Screen */
+@media screen and (min-width: 640px) {
+    body {
+        background-color: yellow;
+    }
+}
