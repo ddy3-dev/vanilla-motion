@@ -1,4 +1,26 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/assets/fonts/inter.ttf');
+}
+
+@font-face {
+    font-family: 'Cal Sans';
+    src: url('/assets/fonts/cal-sans.ttf');
+}
+
+:root {
+    --vanilla: #ffffdf;
+    --vanillabrown: #6f5d00;
+    --vanillanight: #1c1500;
+}
+
+h1 {
+    font-family: 'Cal Sans', sans-serif;
+    color: var(--vanillabrown);
+}
+
 * {
+    font-family: 'Inter', sans-serif;
     box-sizing: border-box;
 }
 
@@ -10,6 +32,43 @@ body {
 /* Tablet Screen */
 @media screen and (min-width: 640px) {
     body {
-        background-color: yellow;
+        background-color: rgb(255, 255, 223);
+        display: grid;
+        grid-template-columns: 200px auto;
     }
+}
+
+.link {
+    padding: 4px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.link.active {
+    font-weight: bold;
+}
+
+.link:hover {
+    background-color: #00ffff;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    color: var(--vanillabrown)
+}
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--vanillanight);
+    height: 100vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+    padding: 10px
+}
+
+#app {
+    padding: 12px 24px;
 }
