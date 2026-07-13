@@ -30,16 +30,17 @@ class Router {
     }
 
     static registerEvents(router) {
+        if (typeof window === 'undefined') return;
         if (!(router instanceof Router)) return;
         if (router.routes.length === 0) return;
 
         window.addEventListener('click', (e) => {
-            const link = e.target.closest('.link'); 
-    
+            const link = e.target.closest('.link');
+
             if (link) {
                 e.preventDefault();
-                const url = link.getAttribute('href'); 
-                window.history.pushState(null, null, url);
+                const url = link.getAttribute('href');
+                window.history.pushState(null, "", url);
                 router.route();
             }
         });
