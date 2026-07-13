@@ -40,7 +40,7 @@ body {
 
 .link {
     padding: 4px 10px;
-    border-radius: 10px;
+    border-radius: 16px;
     text-decoration: none;
     color: white;
     transition: all 0.2s ease;
@@ -63,12 +63,68 @@ body {
     flex-direction: column;
     background-color: var(--vanillanight);
     height: 100vh;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 28px;
+    border-bottom-right-radius: 28px;
     overflow: hidden;
-    padding: 10px
+    padding: 10px;
+    position: relative;
 }
 
 #app {
     padding: 12px 24px;
+}
+
+#user-bar {
+    background: white;
+    border-radius: 64px;
+    border: 2px solid rgb(186, 186, 186);
+    align-self: flex-end;
+    width: 90%;
+    height: 48px;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+    display: flex;  
+    align-items: center; 
+    transition: transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#user-bar:hover {
+    transform: translateY(-2px);
+}
+
+#user-circle {
+    border-radius: 32px;
+    width: 40px;
+    height: 40px;
+    background: #e4a000;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-inline: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+#user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    user-select: none;
+    margin-inline: 3px;
+}
+
+p {
+    margin-block: 1px;
+}
+
+#fullname {
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+#email {
+    font-size: 0.7rem;
 }
